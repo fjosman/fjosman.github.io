@@ -1,4 +1,7 @@
-<contentlist>
-<contenttype>singlepage</contenttype>
+<frameset>
+<frameindex>index.html</frameindex>
+<frame>
+<name>contentframe</name>
 <pagelist/>
-</contentlist>
+</frame>
+</frameset>
