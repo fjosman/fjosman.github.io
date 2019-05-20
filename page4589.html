@@ -96,17 +96,17 @@ function init_page()
 		if(!isMobile.any()) trivCenter();
 		window.trivBgndAudio = new jsBgSound();
 		trivBgndAudio.attach(false);
-		trivMatchSetup(text4596,true,'1L',qu4594,11, '#ffffff', 4);
+		trivMatchSetup(text4596,true,'1L',qu4594,12, '#ffffff', 4);
 
-		trivMatchSetup(text4598,true,'2L',qu4594,11, '#ffffff', 4);
+		trivMatchSetup(text4598,true,'2L',qu4594,12, '#ffffff', 4);
 
-		trivMatchSetup(text4599,false,'3R',qu4594,11, '#ffffff', 4);
+		trivMatchSetup(text4599,false,'3R',qu4594,12, '#ffffff', 4);
 
-		trivMatchSetup(text4600,true,'3L',qu4594,11, '#ffffff', 4);
+		trivMatchSetup(text4600,true,'3L',qu4594,12, '#ffffff', 4);
 
-		trivMatchSetup(text4601,false,'2R',qu4594,11, '#ffffff', 4);
+		trivMatchSetup(text4601,false,'2R',qu4594,12, '#ffffff', 4);
 
-		trivMatchSetup(text4603,false,'1R',qu4594,11, '#ffffff', 4);
+		trivMatchSetup(text4603,false,'1R',qu4594,12, '#ffffff', 4);
 
 		attachObjs();
 
@@ -208,6 +208,7 @@ if( is.min ) {
 	var textbutton4427 = new jsWndTextButton(); //black1_cancel
 	var textbutton4428 = new jsWndTextButton(); //black1_back
 	var textbutton4429 = new jsWndTextButton(); //black1_next
+	var textbutton4674 = new jsWndTextButton(); //black1_ok
 	var shape4590 = new jsWndShape(); //Rectangle
 	var qu4594 = new jsWndMatchingQuestion(); //Question_4594
 	var text4595 = new jsWndText(); //Question Text
@@ -217,7 +218,6 @@ if( is.min ) {
 	var text4600 = new jsWndText(); //Choice 3 text
 	var text4601 = new jsWndText(); //Right choice text
 	var text4603 = new jsWndText(); //Right choice text
-	var text4635 = new jsWndText(); //Text Block 1
 	action4594_1 = function(pF){
     trivAlert('action4594_1','Intro til Classcraft _ Lectora','Flott, alt rett!', pF); 
 };
@@ -235,8 +235,8 @@ if( is.min ) {
 		];
 	var alertCtr = 0;
 	var trivPageId=4589; //trivPage.id
-	var arWnds = [textbutton1075,textbutton1755,text4399,shape4590,text4595,text4596,text4598,text4599,text4600,text4601,text4603,text4635,textbutton3787,textbutton3780,textbutton1324,textbutton4427,textbutton4428,textbutton4429];
-	var arAttachObj = [textbutton3787,textbutton3780,textbutton1075,textbutton1324,textbutton1755,text4399,textbutton4427,textbutton4428,textbutton4429,shape4590,qu4594,text4595,text4596,text4598,text4599,text4600,text4601,text4603,text4635];
+	var arWnds = [textbutton1075,textbutton1755,text4399,shape4590,text4595,text4596,text4598,text4599,text4600,text4601,text4603,textbutton3787,textbutton3780,textbutton1324,textbutton4427,textbutton4428,textbutton4429,textbutton4674];
+	var arAttachObj = [textbutton3787,textbutton3780,textbutton1075,textbutton1324,textbutton1755,text4399,textbutton4427,textbutton4428,textbutton4429,textbutton4674,shape4590,qu4594,text4595,text4596,text4598,text4599,text4600,text4601,text4603];
 	var arPooledMedia = [];
 	var arQuest = [qu4594];
 }
