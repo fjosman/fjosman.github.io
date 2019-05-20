@@ -23,7 +23,6 @@
 <script type='text/javascript' src='trivantis-timedate.js'></script>
 <script type='text/javascript' src='trivantis-trans.js'></script>
 <script type='text/javascript' src='trivantis-wndobj.js'></script>
-<script type='text/javascript' src='trivantis-strings.js'></script>
 <script type='text/javascript' src='hammer.js'></script>
 <script>
 
@@ -60,7 +59,7 @@ var bSingleScrubView = f;
 var bFillWindow = f;
 var bFitWidth = f;
 var bFitMobile = f;
-var bAutoStartOnPage = t;
+var bAutoStartOnPage = f;
 getDisplayWindow().bHTML5ONLY = t;
 
 trivSetupPage();
@@ -76,7 +75,7 @@ function init_page()
 		trivCenterPage = true;
 		if(!isMobile.any()) trivCenter();
 		window.trivBgndAudio = new jsBgSound();
-		trivBgndAudio.attach('media/reckless_mysteries_amb_1.mp3');
+		trivBgndAudio.attach(false);
 		attachObjs();
 
 		trivPage.issueShowActions(arWnds);

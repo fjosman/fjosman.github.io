@@ -15,13 +15,11 @@
 <link rel="stylesheet" href="trivantis-player.css" type="text/css" />
 <script type='text/javascript' src='es6-promise-2.0.0.min.js'></script>
 <script type='text/javascript' src='jquery-1.12.4.min.js'></script>
-<script type='text/javascript' src='mediaelement-and-player.js'></script>
 <script type='text/javascript' src='trivantis-utils.js'></script>
 <script type='text/javascript' src='trivantis.js'></script>
 <script type='text/javascript' src='trivantis-cookie.js'></script>
 <script type='text/javascript' src='trivantis-timedate.js'></script>
 <script type='text/javascript' src='trivantis-wndobj.js'></script>
-<script type='text/javascript' src='trivantis-strings.js'></script>
 <script type='text/javascript' src='hammer.js'></script>
 <script>
 
@@ -58,7 +56,7 @@ var bSingleScrubView = f;
 var bFillWindow = f;
 var bFitWidth = f;
 var bFitMobile = f;
-var bAutoStartOnPage = t;
+var bAutoStartOnPage = f;
 getDisplayWindow().bHTML5ONLY = t;
 
 trivSetupPage();
@@ -75,7 +73,7 @@ function init_page()
 		if(!isMobile.any()) trivCenter();
 		javascript:trivAlert('2','Intro til Classcraft _ Lectora','This title was created with a trial version of Lectora Online.'); 
 		window.trivBgndAudio = new jsBgSound();
-		trivBgndAudio.attach('media/reckless_mysteries_amb_1.mp3');
+		trivBgndAudio.attach(false);
 		attachObjs();
 
 		trivExitPage('page3671.html',true);
