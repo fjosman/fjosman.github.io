@@ -64,7 +64,6 @@ var bAutoStartOnPage = t;
 getDisplayWindow().bHTML5ONLY = t;
 
 trivSetupPage();
-var trivWeb20Popups = true;
 var forceExitPage = false;
 var trivInTest = false;
 
@@ -89,6 +88,7 @@ function init_page()
 function finish() {
     if (window.finishCalled) return;
     window.finishCalled = true;
+    if(window.popupCb) window.popupCb();
     if( trivCompleteCnt > 0 ) trivExitPage( 'ObjLayerActionExit()', false );
 }
 

@@ -63,7 +63,6 @@ var bAutoStartOnPage = t;
 getDisplayWindow().bHTML5ONLY = t;
 
 trivSetupPage();
-var trivWeb20Popups = true;
 var forceExitPage = false;
 var trivInTest = false;
 
@@ -84,6 +83,17 @@ function init_page()
 		trivPage.actionMute();
 	}
 }
+
+function finish() {
+    if (window.finishCalled) return;
+    window.finishCalled = true;
+    if(window.popupCb) window.popupCb();
+}
+
+window.onbeforeunload = function(){
+	if (!theApp.is.ie10orLess) finish();
+};
+window.onunload = finish;
 function trivPrevPage() {
     trivExitPage( 'page4615.html', true )
 }

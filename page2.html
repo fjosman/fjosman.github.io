@@ -12,7 +12,6 @@
 
 <link rel="stylesheet" href="trivantisPage.css" type="text/css" />
 <link rel="stylesheet" href="trivantis-common.css" type="text/css" />
-<link rel="stylesheet" href="trivantis-dialog.css" type="text/css" />
 <link rel="stylesheet" href="trivantis-player.css" type="text/css" />
 <script type='text/javascript' src='es6-promise-2.0.0.min.js'></script>
 <script type='text/javascript' src='jquery-1.12.4.min.js'></script>
@@ -22,7 +21,6 @@
 <script type='text/javascript' src='trivantis-cookie.js'></script>
 <script type='text/javascript' src='trivantis-timedate.js'></script>
 <script type='text/javascript' src='trivantis-wndobj.js'></script>
-<script type='text/javascript' src='trivantis-dialog.js'></script>
 <script type='text/javascript' src='trivantis-strings.js'></script>
 <script type='text/javascript' src='hammer.js'></script>
 <script>
@@ -64,7 +62,6 @@ var bAutoStartOnPage = t;
 getDisplayWindow().bHTML5ONLY = t;
 
 trivSetupPage();
-var trivWeb20Popups = true;
 var forceExitPage = false;
 var trivInTest = false;
 
@@ -87,6 +84,17 @@ function init_page()
 		trivPage.actionMute();
 	}
 }
+
+function finish() {
+    if (window.finishCalled) return;
+    window.finishCalled = true;
+    if(window.popupCb) window.popupCb();
+}
+
+window.onbeforeunload = function(){
+	if (!theApp.is.ie10orLess) finish();
+};
+window.onunload = finish;
 function trivPrevPage() {
     trivExitPage( '', true )
 }
