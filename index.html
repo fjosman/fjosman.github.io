@@ -6,42 +6,30 @@
 <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/><!-- must be the first element in head -->
 <meta charset="UTF-8" />
 <meta name="viewport" content="minimum-scale=1, initial-scale=1" />
-<title>Intro til Classcraft _ Lectora</title>
-<script type='text/javascript' src='es6-promise-2.0.0.min.js'></script>
+<TITLE>SPP Top Page</TITLE>
+<link rel="stylesheet" href="trivantisPage.css" type="text/css" />
+<link rel="stylesheet" href="trivantis-common.css" type="text/css" />
+<link rel="stylesheet" href="trivantis-player.css" type="text/css" />
+<link rel="stylesheet" href="MediaPlayer/trivantis-whotube-skin.css" type="text/css" />
 <script type='text/javascript' src='jquery-1.12.4.min.js'></script>
+<script type='text/javascript' src='mediaelement-and-player.js'></script>
 <script type='text/javascript' src='trivantis-utils.js'></script>
 <script type='text/javascript' src='trivantis.js'></script>
 <script type='text/javascript' src='trivantis-cookie.js'></script>
+<script type='text/javascript' src='trivantis-pagePlayer.js'></script>
+<script type='text/javascript' src='trivantis-opautils.js'></script>
 <script type="text/javascript">
-// <!-- 
-if( !is.min )
-    document.write( "Your browser does not support dynamic html. Please download a current version of either <a href='http://www.microsoft.com/ie/'>Microsoft Internet Explorer or Edge</a> or <a href='http://www.apple.com/safari/download/'>Safari</a> or <a href='http://www.mozilla.com/firefox/'>Mozilla Firefox</a> and try visiting our site again. Thank You.<br /><br />" );
-
-var winW = screen.width;
-var winH = screen.height;
-
-function findWH() {
-    winW = (is.ns)? window.innerWidth-16 : document.body.offsetWidth-20
-    winH = (is.ns)? window.innerHeight   : document.body.offsetHeight
-}
-
-onload = init;
-
-function init() {
-    findWH();
-}
+//<!-- 
+var pagePlayer = n;
+var indexHtmlName = "index.html";
+var firstPageName = "page2.html";
+var pooledAudioCnt = 0;
+var pooledVideoCnt = 0;
+var bAutoStartOnFirstPage = false;
 // -->
 
 </script>
 </head>
-
-<frameset id="trivTitleMgrFrameset" rows="0,*" border="0" frameborder="0" framespacing="0"  >
-  <frame title="Intro til Classcraft _ Lectora" name="titlemgrframe" src="titlemgr.html" resize="no" scrolling="no" marginwidth="0" marginheight="0" />
-  <frame title="Intro til Classcraft _ Lectora" name="contentframe" src="content.html" resize="no" />
-  <noframes>
-    <body>
-      <p>Your browser does not support frames</p>
-    </body>
-  </noframes>
-</frameset>
-</HTML>
+<body onload="opaOnPageLoad()" onunload="opaOnUnload()">
+</body>
+</html>

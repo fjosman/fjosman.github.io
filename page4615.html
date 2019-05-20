@@ -21,11 +21,14 @@
 <script type='text/javascript' src='trivantis.js'></script>
 <script type='text/javascript' src='trivantis-cookie.js'></script>
 <script type='text/javascript' src='trivantis-timedate.js'></script>
+<script type='text/javascript' src='trivantis-titlemgr.js'></script>
 <script type='text/javascript' src='trivantis-wndobj.js'></script>
+<script type='text/javascript' src='trivantis-strings.js'></script>
 <script type='text/javascript' src='hammer.js'></script>
 <script>
 
 // <!-- 
+if(findOPAWindow()==n && !isNewWinPopup()) location.href = "index.html?jmptopg=page4615.html";
 
 var hmr = n;
 var swipeLeft = function(){};
@@ -43,8 +46,7 @@ function initGEV(state, swipeLeft, swipeRight){
 	}
 }
 
-setTrivantisTextDefaults({"mT":"0px","mB":"0px","lh":"1.25"});
-;if( !is.min )
+if( !is.min )
     document.write( "Your browser does not support dynamic html. Please download a current version of either <a href='http://www.microsoft.com/ie/'>Microsoft Internet Explorer or Edge</a> or <a href='http://www.apple.com/safari/download/'>Safari</a> or <a href='http://www.mozilla.com/firefox/'>Mozilla Firefox</a> and try visiting our site again. Thank You.<br /><br />" )
 
 var VarTriMuteAllFLV = new Variable( 'VarTriMuteAllFLV', '', 0, 0, null, null, 'page1.html', t );
@@ -97,7 +99,6 @@ function init_page()
 		    if( gotoPage ) trivExitPage( gotoPage, false )
 		  }
 		}
-		if( parent.document != document) parent.document.title=document.title
 		trivCenterPage = true;
 		if(!isMobile.any()) trivCenter();
 		window.trivBgndAudio = new jsBgSound();
@@ -139,12 +140,12 @@ if( is.min ) {
 	var textbutton1755 = new jsWndTextButton(); //Arrow Right
 	var text4399 = new jsWndText(); //Page Count
 	var shape4631 = new jsWndShape(); //Rectangle
-	var textbutton4617 = new jsWndTextButton(); //black1_ok
 	var results4616 = new jsWndResults(); //Results 1
+	var textbutton4617 = new jsWndTextButton(); //black1_ok
 	var alertCtr = 0;
 	var trivPageId=4615; //trivPage.id
 	var arWnds = [textbutton1075,textbutton1755,text4399,shape4631,results4616,textbutton3787,textbutton3780,textbutton1324,textbutton4617];
-	var arAttachObj = [textbutton3787,textbutton3780,textbutton1075,textbutton1324,textbutton1755,text4399,shape4631,textbutton4617,results4616];
+	var arAttachObj = [textbutton3787,textbutton3780,textbutton1075,textbutton1324,textbutton1755,text4399,shape4631,results4616,textbutton4617];
 	var arPooledMedia = [];
 }
 

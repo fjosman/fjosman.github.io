@@ -21,13 +21,16 @@
 <script type='text/javascript' src='trivantis.js'></script>
 <script type='text/javascript' src='trivantis-cookie.js'></script>
 <script type='text/javascript' src='trivantis-timedate.js'></script>
+<script type='text/javascript' src='trivantis-titlemgr.js'></script>
 <script type='text/javascript' src='trivantis-wndobj.js'></script>
 <script type='text/javascript' src='trivantis-match.js'></script>
 <script type='text/javascript' src='trivantis-questions.js'></script>
+<script type='text/javascript' src='trivantis-strings.js'></script>
 <script type='text/javascript' src='hammer.js'></script>
 <script>
 
 // <!-- 
+if(findOPAWindow()==n && !isNewWinPopup()) location.href = "index.html?jmptopg=page4589.html";
 
 var hmr = n;
 var swipeLeft = function(){};
@@ -45,12 +48,15 @@ function initGEV(state, swipeLeft, swipeRight){
 	}
 }
 
-setTrivantisTextDefaults({"mT":"0px","mB":"0px","lh":"1.25"});
-;if( !is.min )
+if( !is.min )
     document.write( "Your browser does not support dynamic html. Please download a current version of either <a href='http://www.microsoft.com/ie/'>Microsoft Internet Explorer or Edge</a> or <a href='http://www.apple.com/safari/download/'>Safari</a> or <a href='http://www.mozilla.com/firefox/'>Mozilla Firefox</a> and try visiting our site again. Thank You.<br /><br />" )
 
 var VarTriMuteAllFLV = new Variable( 'VarTriMuteAllFLV', '', 0, 0, null, null, 'page1.html', t );
 var Classcraft_Quiz_Score = new Variable( 'Classcraft_Quiz_Score', '0', 0, 0, null, null, 'page1.html'  );
+var VarQuestion_4453 = new Variable( 'VarQuestion_4453', '', 0, 0, null, null, 'page1.html', f );
+var VarQuestion_4506 = new Variable( 'VarQuestion_4506', '', 0, 0, null, null, 'page1.html', f );
+var VarQuestion_4545 = new Variable( 'VarQuestion_4545', '', 0, 0, null, null, 'page1.html', f );
+var VarQuestion_4570 = new Variable( 'VarQuestion_4570', '', 0, 0, null, null, 'page1.html', f );
 var VarQuestion_4594 = new Variable( 'VarQuestion_4594', '', 0, 0, null, null, 'page1.html', f );
 var AICC_Score = new Variable( 'AICC_Score', '0', 0, 0, null, null, 'page1.html', f );
 var VarPageInChapter = new Variable( 'VarPageInChapter', null, 0, 0, null, null, 'page1.html'  );
@@ -86,7 +92,6 @@ function init_page()
 		    if( gotoPage ) trivExitPage( gotoPage, false )
 		  }
 		}
-		if( parent.document != document) parent.document.title=document.title
 		trivCenterPage = true;
 		if(!isMobile.any()) trivCenter();
 		window.trivBgndAudio = new jsBgSound();
@@ -164,6 +169,11 @@ function processTest(bCheck) {
 		}
 		var titleMgr = getTitleMgrHandle();
 		if( titleMgr ) {
+			if( VarQuestion_4453.f > 0 ) VarQuestion_4453.uDT(); else VarQuestion_4453.getValue();
+			if( VarQuestion_4506.f > 0 ) VarQuestion_4506.uDT(); else VarQuestion_4506.getValue();
+			if( VarQuestion_4545.f > 0 ) VarQuestion_4545.uDT(); else VarQuestion_4545.getValue();
+			if( VarQuestion_4570.f > 0 ) VarQuestion_4570.uDT(); else VarQuestion_4570.getValue();
+			if( VarQuestion_4594.f > 0 ) VarQuestion_4594.uDT(); else VarQuestion_4594.getValue();
 			Classcraft_Quiz_Score.set( titleMgr.GetTestScore( 'test4398' ));
 			var score = parseInt( Classcraft_Quiz_Score.getValue() );
 			titleMgr.processTest( 'test4398' );
